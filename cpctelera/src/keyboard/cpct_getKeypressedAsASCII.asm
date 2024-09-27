@@ -97,6 +97,17 @@
 ;; (end code)
 ;; *Note*: Non-standar ASCII characters (>127) in this table will not match Amstrad CPC's characters.
 ;;
+;;    Next code example shows how to use this function in conjunction with <cpct_scanKeyboard>.
+;; Read the keyboard, get the key pressed and return the ASCII value.
+;; (start code)
+;;       u8 key_pressed () {
+;;       u8 key;
+;;       cpct_scanKeyboard();                      // Read keyboard
+;;       key = cpct_getKeypressedAsASCII ();       // returns the ASCII value associated to the pressed key 
+;;       return key;
+;;    }
+;; (end code)
+;;
 ;; Destroyed Register values: 
 ;;    AF, BC, DE, HL
 ;;
