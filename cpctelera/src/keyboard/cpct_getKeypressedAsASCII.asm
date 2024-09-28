@@ -101,11 +101,22 @@
 ;; Read the keyboard, get the key pressed and return the ASCII value.
 ;; (start code)
 ;;       u8 key_pressed () {
-;;       u8 key;
-;;       cpct_scanKeyboard();                      // Read keyboard
+;;       u8 key;                                   // declares symbol key 
+;;       cpct_scanKeyboard();                      // read keyboard
 ;;       key = cpct_getKeypressedAsASCII ();       // returns the ASCII value associated to the pressed key 
 ;;       return key;
 ;;    }
+;; (end code)
+;;
+;;    Next code example shows how to use this function in conjunction with <cpct_scanKeyboard>,<cpct_getKeypressedAsASCII>
+;;    This code scans the keyboard and displays the pressed key n the upper left of the screen.
+;; (start code)
+;;       print_key(){
+;;       u8 key;                                   // declares symbol key
+;;       cpct_scanKeyboard();                      // read keyboard
+;;       key = cpct_getKeypressedAsASCII();        // returns ASCII value to key symbol
+;;       cpct_drawCharM1 ((u8*)0xc000, key);       // prints on the screen the pressed key 
+;;       }
 ;; (end code)
 ;;
 ;; Destroyed Register values: 
