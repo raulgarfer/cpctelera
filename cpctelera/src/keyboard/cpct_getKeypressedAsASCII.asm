@@ -105,7 +105,7 @@
 ;;       cpct_scanKeyboard();                      // read keyboard
 ;;       key = cpct_getKeypressedAsASCII ();       // returns the ASCII value associated to the pressed key 
 ;;       return key;
-;;    }
+;;       }
 ;; (end code)
 ;;
 ;;    Next code example shows how to use this function in conjunction with <cpct_scanKeyboard>,<cpct_getKeypressedAsASCII>
