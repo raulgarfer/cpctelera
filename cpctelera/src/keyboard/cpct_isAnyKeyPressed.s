@@ -52,11 +52,11 @@
 ;;    Next code example shows how to use this function in conjunction with <cpct_scanKeyboard>.
 ;;    
 ;; (start code)
-;;    <u8> any_key_pressed() {
+;;    u8 any_key_pressed() {
 ;;       u8 key_pressed;                       // Declares symbol
 ;;       cpct_scanKeyboard();                  // Updates the keyboard status
 ;;       key_pressed = cpct_isAnyKeyPressed(); // Checks if any key is pressed, and
-;;                                             // returns a number not 0 if a key is pressed.  
+;;       return key_pressed;                   // returns a number not 0 if a key is pressed.  
 ;;    }
 ;; (end code)
 ;; Destroyed Register values: 
