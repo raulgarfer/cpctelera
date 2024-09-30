@@ -33,5 +33,5 @@
 #include <easytilemaps/easytilemaps.h>
 #include <compression/compression.h>
 #include <loaders/loaders.h>
-
+#include <maths/maths.h>
 #endif
