@@ -108,10 +108,10 @@
 ;;       }
 ;; (end code)
 ;;
-;;    Next code example shows how to use this function in conjunction with <cpct_scanKeyboard>,<cpct_getKeypressedAsASCII>
-;;    This code scans the keyboard and displays the pressed key n the upper left of the screen.
+;;    Next code example shows how to use this function in conjunction with <cpct_scanKeyboard>,<cpct_drawCharM1>
+;;    This code scans the keyboard and displays the pressed key in the upper left of the screen.
 ;; (start code)
-;;       print_key(){
+;;       void print_key(){
 ;;       u8 key;                                   // declares symbol key
 ;;       cpct_scanKeyboard();                      // read keyboard
 ;;       key = cpct_getKeypressedAsASCII();        // returns ASCII value to key symbol
