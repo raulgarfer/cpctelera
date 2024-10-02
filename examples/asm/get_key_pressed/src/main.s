@@ -49,17 +49,22 @@ _main::
    ld    e, #3         ;; E = Foreground PEN (3)
    call cpct_setDrawCharM1_asm   ;; Set draw char colours
 loop:
+;; Reads the status of keyboard and joysticks.
    call cpct_scanKeyboard_asm
+;;
 ;;  Assuming there is only one Key currently pressed, it returns the ASCII
-;; value associated to the pressed key.
-;; A	Register holding the return value
+;; value associated to the pressed key. 
+;; Return: Register A as ASCII code of the key pressed (if any)
    call cpct_getKeypressedAsASCII_asm
+;;
+;; Prints ASCII character in the position given by HL.
 ;; Input Parameters (3 Bytes)
 ;; (2B HL) video_memory	Video memory location where the character will be drawn
 ;; (1B E ) ascii	Character to be drawn (ASCII code)
-;; Assembly call (Input parameters on registers)
+;; Note: Only ASCII capitalized letters will be printed.
    ld hl,#0xc000        ;;Start of Video Memory
    ld e,a               ;;Load input parameter
    call cpct_drawCharM1_asm
+;;   
 ;; Loop forever
    jr    loop
